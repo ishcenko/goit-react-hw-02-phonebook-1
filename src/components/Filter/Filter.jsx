@@ -1,22 +1,23 @@
 import PropTypes from 'prop-types';
-import { Label, Inpyt } from './Filter.styled';
+import { Label, Input } from './Filter.styled';
 
-const Filter = ({ handlerFilter }) => {
-    return (
-        <>
-            <Label htmlFor="">Find contact by name</Label>
-            <Inpyt>
-                name='filter'
-                onChange={handlerFilter}
-                type='text'
-                placeholder='Contact search...'
-            </Inpyt>
-        </>
-    );
+const Filter = ({ handleFilter }) => {
+  return (
+    <>
+      <Label htmlFor="">Find contacts by name</Label>
+      <Input
+        name="filter"
+        onChange={handleFilter}
+        type="text"
+        placeholder="Сontact search ..."
+      />
+    </>
+  );
 };
 
+
+
+Filter.propTypes = {
+  handleFilter: PropTypes.func.isRequired,
+};
 export default Filter;
-
-Filter.prototype = {
-    handlerFilter: PropTypes.func.isRequired
-};

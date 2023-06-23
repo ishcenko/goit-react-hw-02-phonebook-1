@@ -1,14 +1,14 @@
 import { Component } from 'react';
 import { nanoid } from 'nanoid';
-import ContactForm from './ContactForm';
-import Filter from './Filter';
-import ContactList from './ContactList';
-import ContactsSet from './ContactSet.json';
+import ContactForm from './ContactForm/ContactForm';
+import Filter from './Filter/Filter';
+import ContactList from './ContactList/ContactList';
+import ContactsDemo from './contactDemo.json';
 import { Wrapper, Title, SubTitle } from './App.styled';
 
 class App extends Component {
   state = {
-    contacts: ContactsSet,
+    contacts: ContactsDemo,
     filter: '',
   };
 
@@ -45,7 +45,7 @@ class App extends Component {
 
   getFilteredContacts() {
     const { filter, contacts } = this.state;
-
+    //проверка на пустую строку
     if (!filter) {
       return contacts;
     }
