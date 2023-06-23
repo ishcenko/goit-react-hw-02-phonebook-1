@@ -31,7 +31,9 @@ class ContactForm extends Component {
             <>
                 <Form onSubmit={handelSubmit} autoComplete='on'>
 
-                    <Label>Name</Label>
+                    <Label>
+                        Name
+                    </Label>
 
                     <input
                         type="text"
